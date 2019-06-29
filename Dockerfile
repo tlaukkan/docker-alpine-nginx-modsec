@@ -44,7 +44,8 @@ RUN echo "Installing ModSec Library" && \
     git submodule init && \
     git submodule update && \
     ./build.sh && \
-    ./configure && make && make install
+    ./configure && make && make install && \
+    rm -fr *
 
 WORKDIR /opt
 
